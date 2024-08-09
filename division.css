@@ -1,0 +1,199 @@
+body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: lightblue;
+  user-select: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.value-button1 {
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px 0;
+  background: #eee;
+  cursor: pointer;
+}
+.value-button2{
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px 0;
+  background: #eee;
+  cursor: pointer;
+}
+.value-button:hover {
+  background: #ddd;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+input#numberAM,
+input#numberAP,
+input#numberAC,
+input#numberAB,
+input#numberAE {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 25px;
+  height: 29px;
+}
+
+input#numberM,
+input#numberP,
+input#numberC,
+input#numberB,
+input#numberE,
+input#numberS {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 30px;
+  height: 33px;
+  
+}
+
+.ate_rn {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: black; 
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.scroll-bg {
+  width: 800px;
+  margin: 10% auto;
+  overflow-x: hidden;
+}
+
+.scroll-div {
+  width: 800px;
+  height: 300px;
+  background-color: lightcoral;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.scroll-obj {
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 20px;
+}
+
+.form2 {
+  float: right;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-right: 50px;
+}
+
+.form1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.con-2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  margin-right: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Maths {
+  width: 15%;
+  margin-left: 100px;
+}
+
+.Physics,
+.Chemistry,
+.Biology,
+.English {
+  width: 15%;
+}
+
+.lbl_Maths {
+  position: relative;
+  margin-top: 20px;
+  top: -520px;
+  left: 53.5%;
+}
+
+.lbl_Physics {
+  position: relative;
+  margin-top: 20px;
+  top: -520px;
+  left: 58.5%;
+}
+
+.lbl_Chemistry {
+  position: relative;
+  margin-top: 30px;
+  top: -520px;
+  left: 63%;
+}
+
+.lbl_Biology {
+  position: relative;
+  margin-top: 30px;
+  top: -520px;
+  left: 68%;
+}
+
+.lbl_English {
+  position: relative;
+  margin-top: 30px;
+  top: -520px;
+  left: 73%;
+}
+
+.submit {
+  background-color: limegreen;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  position: relative;
+  top: 30px;
+  left: 70%;
+}
+button:hover {
+  opacity: 0.7;
+}

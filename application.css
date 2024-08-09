@@ -1,0 +1,27 @@
+body {
+    background-color: white;
+    background-image: url('teacher-page.png');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    user-select: none
+}
+.h2 {
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 400px;
+    height: 200px;	
+}
+button {
+    padding: 2px;
+    height: 30px;
+    width: 100px;
+    background-color: #454545;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+	opacity: 0.6;
+}

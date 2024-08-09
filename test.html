@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Value from Another Field</title>
+</head>
+<body>
+
+<label for="input1">Input 1:</label>
+<input type="number" id="input1">
+<br><br>
+<label for="input2">Input 2:</label>
+<input type="number" id="input2">
+
+<script>
+    // Function to update the max value of input2 based on input1
+    function updateMaxValue() {
+        var input1Value = parseFloat(document.getElementById('input1').value);
+        var input2 = document.getElementById('input2');
+        input2.setAttribute('max', input1Value);
+        
+        // If the value of input2 exceeds the max value, reset it to the max value
+        if (parseFloat(input2.value) > input1Value) {
+            input2.value = input1Value;
+        }
+    }
+
+    // Attach event listeners to input1 and input2 to update max value and reset input2 value
+    document.getElementById('input1').addEventListener('input', updateMaxValue);
+    document.getElementById('input2').addEventListener('input', updateMaxValue);
+</script>
+
+</body>
+</html>

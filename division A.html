@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="division.css">
+    <script src="division.js"></script>
+    <title>Division A</title>
+</head>
+
+<body>
+    <h1 align="center">Division A</h1><br>
+    <form class="form1" method="post" action="submission A.php">
+        <h3 style="position: relative; left: 8%;">Select Lectures Conducted</h3>
+        <container class="con-1" style="position: relative; width: fit-content; border: 3px; border-color: black;">
+            <label>Maths:</label><br><br>
+            <div class="value-button1" id="decreaseM" onclick="decreaseValueM()" value="Decrease Value">-</div>
+            <input type="number" id="numberM" value="1" />
+            <div class="value-button2" id="increaseM" onclick="increaseValueM()" value="Increase Value">+</div>
+            <br><br>
+            <label>Physics:</label><br><br>
+            <div class="value-button1" id="decreaseP" onclick="decreaseValueP()" value="Decrease Value">-</div>
+            <input type="number" id="numberP" value="1" />
+            <div class="value-button2" id="increaseP" onclick="increaseValueP()" value="Increase Value">+</div>
+            <br><br>
+            <label>Chemistry:</label><br><br>
+            <div class="value-button1" id="decreaseC" onclick="decreaseValueC()" value="Decrease Value">-</div>
+            <input type="number" id="numberC" value="1" />
+            <div class="value-button2" id="increaseC" onclick="increaseValueC()" value="Increase Value">+</div>
+            <br><br>
+            <label>Biology:</label><br><br>
+            <div class="value-button1" id="decreaseB" onclick="decreaseValueB()" value="Decrease Value">-</div>
+            <input type="number" id="numberB" value="1" />
+            <div class="value-button2" id="increaseB" onclick="increaseValueB()" value="Increase Value">+</div>
+            <br><br>
+            <label>English:</label><br><br>
+            <div class="value-button1" id="decreaseE" onclick="decreaseValueE()" value="Decrease Value">-</div>
+            <input type="number" id="numberE" value="1" />
+            <div class="value-button2" id="increaseE" onclick="increaseValueE()" value="Increase Value">+</div>
+        </container>
+        <br><br>
+
+        <label class="lbl_Maths">Maths:</label>
+        <label class="lbl_Physics">Physics:</label>
+        <label class="lbl_Chemistry">Chemistry:</label>
+        <label class="lbl_Biology">Biology:</label>
+        <label class="lbl_English">English:</label>  
+
+        <container class="con-2" style="margin-top: 30px;">
+                <div class="scroll-div" style="position: relative;">
+                <div class="scroll-obj">
+                </div>
+                </div>         
+        </container>
+        <button type="submit" class="submit" name="submit" id="submit">Submit</button>
+    </form>
+
+    <script>
+        // Function to make an AJAX request to the division A.php
+        function getStudentData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "division A.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                    var responseData = JSON.parse(this.responseText);
+                    if (responseData.length > 0) {
+                        var html = "";
+                        //Error is in responsedata
+                        for (var i = 0; i < responseData.length; i++) {
+                            html += "<input type='hidden' name='rollnos[]' value='" + responseData[i]["rollno"] + "'>";
+                            html += "<div class='ate_rn'>Rollno:  " + responseData[i]["rollno"] + "</div>"
+                            html += "<div class='container'>"
+                            html += "<div class='Maths'>" 
+                            html += "<input type='number' name='numberAM' id='numberAM' class='number-input AM' value='0' />"                         
+                            html += "</div>"
+                            html += "<div class='Physics'>"
+                            html += "<input type='number' name='numberAP' id='numberAP' class='number-input AP' value='0' />" 
+                            html += "</div>"
+                            html += "<div class='Chemistry'>"
+                            html += "<input type='number' name='numberAC' id='numberAC' class='number-input AC' value='0' />" 
+                            html += "</div>"
+                            html += "<div class='Biology'>"
+                            html += "<input type='number' name='numberAB' id='numberAB' class='number-input AB' value='0' />" 
+                            html += "</div>"
+                            html += "<div class='English'>"
+                            html += "<input type='number' name='numberAE' id='numberAE' class='number-input AE' value='0' />" 
+                            html += "</div>"
+                            html += "<br><br><br>"
+                            html += "</div>"
+                        }
+                        document.querySelector(".scroll-obj").innerHTML = html;
+                    } else {
+                        document.querySelector(".scroll-obj").innerHTML = "No results";
+                    }
+                }
+            };
+            xhr.send(); // Send the request without any parameters
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function updateMaxValue() {
+                const numberMValue = parseFloat(document.getElementById('numberM').value);
+                const numberPValue = parseFloat(document.getElementById('numberP').value);
+                const numberCValue = parseFloat(document.getElementById('numberC').value);
+                const numberBValue = parseFloat(document.getElementById('numberB').value);
+                const numberEValue = parseFloat(document.getElementById('numberE').value);
+
+                document.querySelectorAll('.AM').forEach(input => {
+                    input.setAttribute('max', numberMValue);
+                    if (parseFloat(input.value) > numberMValue) {
+                        input.value = numberMValue;
+                    }
+                });
+
+                document.querySelectorAll('.AP').forEach(input => {
+                    input.setAttribute('max', numberPValue);
+                    if (parseFloat(input.value) > numberPValue) {
+                        input.value = numberPValue;
+                    }
+                });
+
+                document.querySelectorAll('.AC').forEach(input => {
+                    input.setAttribute('max', numberCValue);
+                    if (parseFloat(input.value) > numberCValue) {
+                        input.value = numberCValue;
+                    }
+                });
+
+                document.querySelectorAll('.AB').forEach(input => {
+                    input.setAttribute('max', numberBValue);
+                    if (parseFloat(input.value) > numberBValue) {
+                        input.value = numberBValue;
+                    }
+                });
+
+                document.querySelectorAll('.AE').forEach(input => {
+                    input.setAttribute('max', numberEValue);
+                    if (parseFloat(input.value) > numberEValue) {
+                        input.value = numberEValue;
+                    }
+                });
+            }
+
+            // Attach event listener to the parent element of dynamically generated inputs
+            document.querySelector('.scroll-obj').addEventListener('input', function(event) {
+                if (event.target.matches('.number-input')) {
+                    updateMaxValue();
+                }
+            });
+        });
+
+        getStudentData(); // Call the function to retrieve all roll numbers
+    </script>
+</body>
+</html>

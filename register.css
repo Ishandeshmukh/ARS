@@ -1,0 +1,34 @@
+body {
+    font-family: Calibri, Helvetica, sans-serif;
+    background-image: url('login background 1.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-color: white;
+    user-select: none 
+    }
+
+    input[type=text], input[type=password], input[type=email] {   
+    width: 100%;   
+    margin: 8px 0;  
+    padding: 12px 20px;   
+    display: inline-block;   
+    border: 2px transparent;   
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+      }
+    button:hover {   
+          opacity: 0.7;   
+      }	
+    .h1 {
+        font-family: "Times New Roman", Times, serif;
+        }
+    label {
+        position: relative;
+        color: white;
+	    left: 2%
+    }
+    .div-sel {
+        background-color: #454545;
+    }
+    

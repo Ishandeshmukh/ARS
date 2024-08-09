@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <script src="register.js"></script>
+    <title>Registration Page</title>
+</head>
+<body>
+    <header>
+	    <h1 class="h1" align="center">Register</h1>	    
+    </header>
+
+    <form action="login.html" method="post" align="right">
+	<button type="submit" href="index.html" style="background-color: #454545; width: 7%; color: white; padding: 15px; margin: 10px 0px; border: none; border-radius: 10px; cursor: pointer;">Login	<img src="login.png" alt="" height="25px" width="25px"></img></button>		
+    </form>		
+      
+     <div class="container">
+        <form action="register.php" onsubmit="return check();" id="register" name="register" method="post" style="border: 3px solid transparent; width: 400px; height: 618px; position:absolute;top:17%;left:37%; border: 2px solid rgba(255, 255, 255, .5); border-radius: 20px; backdrop-filter: blur(5px);">
+            <container class="container">
+                <br>
+                <label class="label"><u>First Name:</u></label><br>
+                <input type="text" placeholder="Enter First name" id="firstname" name="firstname" spellcheck="false" required><br>
+                <label><u>Last Name:</u></label><br>
+                <input type="text" placeholder="Enter Last Name" id="lastname" name="lastname" spellcheck="false" required><br>
+                <label><u>Email Address:</u></label><br>
+                <input type="email" placeholder="Enter Email id" id="email" name="email" spellcheck="false" required><br>
+                <label><u>Select Roll no:</u></label><br><br>
+                <select id="Rollno" id="rollno" name="rollno" style="padding: 2px; background: #454545; color: white; border:none; border-radius: 2px; position: relative; left: 3%;" required>
+                    <option value="1">
+                        1
+                    </option>
+                    <option value="2">
+                        2
+                    </option>
+                    <option value="3">
+                        3
+                    </option>
+                    <option value="4">
+                        4
+                    </option>
+                    <option value="5">
+                        5
+                    </option>
+                    <option value="6">
+                        6
+                    </option>
+                    <option value="7">
+                        7
+                    </option>
+                    <option value="8">
+                        8
+                    </option>
+                    <option value="9">
+                        9
+                    </option>
+                    <option value="10">
+                        10
+                    </option>
+                    <option value="11">
+                        11
+                    </option>
+                    <option value="12">
+                        12
+                    </option>
+                    <option value="13">
+                        13
+                    </option>
+                    <option value="14">
+                        14
+                    </option>
+                    <option value="15">
+                        15
+                    </option>
+                    <option value="16">
+                        16
+                    </option>
+                    <option value="17">
+                        17
+                    </option>
+                    <option value="18">
+                        18
+                    </option>
+                    <option value="19">
+                        19
+                    </option>
+                    <option value="20">
+                        20
+                    </option>
+                    <option value="21">
+                        21
+                    </option>
+                    <option value="22">
+                        22
+                    </option>
+                    <option value="23">
+                        23
+                    </option>
+                    <option value="24">
+                        24
+                    </option>
+                    <option value="25">
+                        25
+                    </option>
+                    <option value="26">
+                        26
+                    </option>
+                    <option value="27">
+                        27
+                    </option>
+                    <option value="28">
+                        28
+                    </option>
+                    <option value="29">
+                        29
+                    </option>
+                    <option value="30">
+                        30
+                    </option>
+                </select><br><br>
+                <label><u>Select Division:</u></label><br><br>
+                <select id="division" id="division" name="division" style="padding: 2px; background: #454545; color: white; border:none; border-radius: 2px; position: relative; left: 3%;" required><br>
+                    <option value="A">
+                        Division A
+                    </option>
+                    <option value="B">
+                        Division B
+                    </option>
+                    <option value="C">
+                        Division C
+                    </option>
+                </select><br><br>
+                <label><u>Password:</u></label><br>
+                <input type="password" placeholder="Enter password" id="password" name="password" minlength="6" maxlength="6" spellcheck="false" required><br>
+                <label><u>Confirm Password:</u></label><br>
+                <input type="password" placeholder="Confirm password" minlength="6" maxlength="6" id="confirm_password" spellcheck="false" required><br>
+                <button value="Submit" id="submit" name="register" style="background-color: #454545; width: 100%; color: white; padding: 15px; margin: 10px 0px; border: none; cursor: pointer">Submit</button>
+            </container>
+        </form>
+     </div>
+
+</body>
+</html>
